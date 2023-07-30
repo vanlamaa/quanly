@@ -1,0 +1,48 @@
+@model FirtswebMVC.Models.Cat
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Cat</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CatID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CatID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CatCategory)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CatCategory)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnimalName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnimalName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnimalWeight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnimalWeight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnimalHeight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnimalHeight)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.AnimalID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
